@@ -1,1 +1,1 @@
-obj_dir/Vcontrol_unit_top
+obj_dir/VRISC

@@ -5,7 +5,7 @@ module alu (
   input logic [31:0] ALUop1,
   input logic [31:0] regOp2,
   output logic EQ,
-  output logic [31:0] ALUout, // note: 31:1 -> 31:0
+  output logic [31:0] ALUout // note: 31:1 -> 31:0
 );
 
 // note: use correct indentation

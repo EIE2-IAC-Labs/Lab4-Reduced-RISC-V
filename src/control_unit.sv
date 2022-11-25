@@ -47,7 +47,7 @@ always_comb begin
 
     default: begin
       RegWrite = 0;
-      ALUctrl = 2'b00;
+      ALUctrl = 3'b000;
       ALUsrc = 0;
       Immsrc = 0;
       PCsrc = 0;

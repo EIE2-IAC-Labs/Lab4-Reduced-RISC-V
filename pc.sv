@@ -1,4 +1,4 @@
-module pc_top #(
+module pc #(
   parameter ADDR_WIDTH = 32,
   parameter DATA_WIDTH = 32,
   parameter IMMO_WIDTH = 32

@@ -30,7 +30,7 @@ always_comb begin
       Immsrc = 2'b00;
     end
 
-    7'b1100011: begin // bne & bqe
+    7'b1100011: begin // bne & beq
       case(instr[14:12])
         3'b000: 
           PCsrc = EQ;

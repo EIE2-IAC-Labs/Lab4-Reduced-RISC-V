@@ -12,7 +12,7 @@ logic [INSTR_LEN-1:0] instr_data [2**ADDR_LEN-1:0];
 
 initial begin
   $display("[DUT] Load instr_mem from instr.mem file.");
-  $readmemh("instr.mem", data);
+  $readmemh("instr.mem", instr_data);
 end
 
 // note: right shift A by 2 digits for byte addressing

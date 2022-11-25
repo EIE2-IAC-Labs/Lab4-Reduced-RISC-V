@@ -1,17 +1,20 @@
-module Signextend #(
-    parameter in_length = 32;
-              out_length = 32;
+module sign_extend #(
+  parameter IN_LEN = 32,
+  parameter OUT_LEN = 32
 )(
-    input logic [1:0]Immsrc;
-    input logic [in_length-1:0] input,
-    output logic [out_length-1:0] output
+  // note: don't use same variable name as keywords
+  input logic [1:0] Immsrc,
+  input logic [IN_LEN-1:0] in,
+  output logic [OUT_LEN-1:0] out
 );
 
-always_comb begin
-    case(Immsrc)
-    2'b00: output = {20{input[31]},input[31:20]};
-    2'b01: output = {20{input[31]},input[31],input[7],input[30:25],input[11:8]};
-    default: ouput = 32'b0;
-end
+// note: missing endcase
+// note: add space in between commas
+always_comb
+  case (Immsrc)
+    2'b00: out = {20{in[31]}, in[31:20]};
+    2'b01: out = {20{in[31]}, in[31], in[7], in[30:25], in[11:8]};
+    default: out = 32'b0;
+  endcase
 
 endmodule

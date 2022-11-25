@@ -1,13 +1,21 @@
-module InstrMem #(
-    parameter instr_length = 32,
-              addr_length = 32,
+module instr_mem #(
+  // note: use correct naming convention for parameters
+  parameter INSTR_LEN = 32,
+  parameter ADDR_LEN = 8
 )(
-    input logic [addr_length-1:0] address,
-    output logic [instr_length-1:0] instruction,
+  // note: use correct name for component externals
+  input logic [ADDR_LEN-1:0] A,
+  output logic [INSTR_LEN-1:0] RD
 );
 
-logic [instr_length-1:0] rom_instrmem [2**addr_length-1:0];
+logic [INSTR_LEN-1:0] instr_data [2**ADDR_LEN-1:0];
 
-assign instruction = rom_instrmem [address];
+initial begin
+  $display("[DUT] Load instr_mem from instr.mem file.");
+  $readmemh("instr.mem", data);
+end
+
+// note: right shift A by 2 digits for byte addressing
+assign RD = instr_data[{2'b0, A[ADDR_LEN-1:2]}];
 
 endmodule

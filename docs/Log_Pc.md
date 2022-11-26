@@ -20,7 +20,7 @@ Testbench:
 
 Output program counter steadily increases by 4 every cycle. Behaves as expected. See Figure 1.
 
-| ![Figure 1: Program Counter Branch Test](images/pc-test-1.png) |
+| ![Figure 1: Program Counter Branch Test](img/pc-test-1.png) |
 |:--:|
 | Figure 1: Program Counter Branch Test |
 
@@ -32,6 +32,6 @@ Testbench:
 
 Output program counter steadily increases by 20 (0x14) every cycle. Behaves as expected. See Figure 2 for simulation result.
 
-| ![Figure 2: Program Counter Normal Test](images/pc-test-2.png) |
+| ![Figure 2: Program Counter Normal Test](img/pc-test-2.png) |
 |:--:|
 | Figure 2: Program Counter Normal Test |

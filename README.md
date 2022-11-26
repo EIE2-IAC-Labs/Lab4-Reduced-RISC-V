@@ -4,7 +4,7 @@
 
 <div id="individual-logs"></div>
 
-* [Logbook: Program Counter](Log_Pc.md)
+* [Logbook: Program Counter](docs/Log_Pc.md)
 * [Logbook: Control Unit & Others]()
 * [Logbook: Register File & ALU]()
 * [Logbook: Testbench]()

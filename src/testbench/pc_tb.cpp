@@ -1,6 +1,6 @@
 #include "verilated.h"
 #include "verilated_vcd_c.h"
-#include "Vpc.h"
+#include "Vpc_top.h"
 
 #define MAX_SIM_CYC 100
 
@@ -11,7 +11,7 @@ int main(int argc, char **argv, char **env) {
   Verilated::commandArgs(argc, argv);
   Verilated::traceEverOn(true);
 
-  Vpc* top = new Vpc;
+  Vpc_top* top = new Vpc_top;
   VerilatedVcdC* tfp = new VerilatedVcdC;
 
   top->trace(tfp, 99);

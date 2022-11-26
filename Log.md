@@ -9,6 +9,14 @@
 * [Logbook: Register File & ALU]()
 * [Logbook: Testbench]()
 
+---
+
+## Quick Start
+
+To run our default tests:
+1. `cd src`:<br> go to `src/` directory.
+2. `source doit.sh` or `source doit.sh *device-name*`:<br> adding the device name as a positional argument runs the device specific testbenches otherwise it will run the testbench for the processor.
+
 ## Intro
 
 The objective of Lab 4 was to create a Reduced RISC-V processor while agreeing upon the basic workflow of the team. 
@@ -30,12 +38,14 @@ We made the following major design decisions:
 * Register File: 5-bit address with 32-bit data.
 * Data Memory: 8-bit address with 32-bit data.
 
-## Quick Start
+## Challenges
 
-To run our default tests:
-1. `cd src`.
-2. `source build.sh`.
-3. View the generated `RISC.vcd` for waveforms.
+1. Git/Github: 
+  * Unfamiliarity with Git resulted in unruly commits on different branches.
+  * Not having a .gitignore set in the first place results in generated files being committed.
+
+2. Conventions:
+  * Different people name things differently. Try to follow the graph as best as possible.
 
 ---
 
@@ -123,8 +133,9 @@ root
 ├── src/
 │   ├── alu/
 │   ├── pc/
-│   ├── ctrl/
-│   └── build.sh
+│   ├── control_unit/
+│   ├── doit.sh
+│   └── doit.config
 ├── .gitignore
 └── README.md (symlink)
 ```
@@ -139,5 +150,6 @@ root
 
 1. `README.md`: symlink to either Lab-4.md or Log.md.
 2. `.gitignore`: standard file to ignore verilator obj_dir, .vcd, and other os files.
-3. `build.sh`: shell script that builds and runs the design, with easy debugging features.
+3. `doit.sh`: shell script that builds and runs the design, with easy debugging features.
+4. `doit.config`: configuration file for verilator arguments, such as suppressing warnings and others.
 

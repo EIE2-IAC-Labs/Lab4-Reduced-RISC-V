@@ -1,4 +1,4 @@
-#include "VALUtop.h"
+#include "Valu_top.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 
@@ -7,12 +7,12 @@ int main(int argc, char **argv, char **env){
     int clk;
     Verilated::commandArgs(argc,argv);
 //  initialise top verilog instance
-    VALUtop* top = new VALUtop;
+    Valu_top* top = new Valu_top;
 // initialise trace dump
     Verilated::traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
     top->trace(tfp,99);
-    tfp->open("VALUTop.vcd");
+    tfp->open("Valu_top.vcd");
 
     // initialise simulation outputs
     top->clk =1;

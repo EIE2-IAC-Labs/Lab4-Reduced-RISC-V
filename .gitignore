@@ -1,2 +1,9 @@
 # build
-*obj_dir*
+**/obj_dir/**
+**/build/**
+
+# waveform
+*.vcd
+
+# os
+.DS_Store

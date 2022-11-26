@@ -3,12 +3,16 @@
 # user vars
 OBJ_DIR=build
 if [[ $# -eq 0 ]] 
-then DUT_NAME=RISC;
-else DUT_NAME=$1_top; 
+then 
+  DUT_NAME=RISC
+else 
+  DUT_NAME=$1_top
 fi
 if [[ $# -eq 0 ]] 
-then TB_NAME=$DUT_NAME;
-else TB_NAME=testbench/$1; 
+then 
+  TB_NAME=$DUT_NAME
+else 
+  TB_NAME=testbench/$1
 fi
 
 # script vars

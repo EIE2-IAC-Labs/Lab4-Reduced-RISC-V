@@ -13,7 +13,7 @@ module sign_extend #(
 always_comb
   case (Immsrc)
     2'b00: out = {{20{in[31]}}, in[31:20]};
-    2'b01: out = {{20{in[31]}}, in[31], in[7], in[30:25], in[11:8],1'b0};
+    2'b01: out = {{19{in[31]}}, in[31], in[7], in[30:25], in[11:8],1'b0};
     default: out = 32'b0;
   endcase
 

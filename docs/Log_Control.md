@@ -22,17 +22,16 @@ The signed extension of immediate is based on the Immsrc input from the control 
 **3. Control Unit**
 
 ### addi operation
-the addi operation add a imm and data in a register together and then store to a register in register file. See fisrt four cycles in Figure 1 and Table 1.
+the addi operation add a imm and data in a register together and then store to a register in register file. See fisrt four cycles in Figure 1 and Table below.
 
 ### bne & beq operation
-the bne(branch not equal) and beq(branch equal) branch the program depending on whether imm and data in a register are the same. EQ is the output from ALU and produce 1 when two values are equal. See the fifith cycle in Figure 1 and Table 1.
+the bne(branch not equal) and beq(branch equal) branch the program depending on whether imm and data in a register are the same. EQ is the output from ALU and produce 1 when two values are equal. See the fifith cycle in Figure 1 and Table below.
 
 |Operation|ALUctrl|ALUsrc|Immsrc|PCsrc|RegWrite|
 |---------|-------|------|------|-----|--------|
 |addi|000|1|insrt[31]|0|0|
 |bne|001|1|instr[31]|~EQ|0|
 |bqe|001|1|instr[31]|EQ|0|
-|Table 1|
 
 |![control_unit_test](img/control_unit_test.jpg)|
 |:--:|
